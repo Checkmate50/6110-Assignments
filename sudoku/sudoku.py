@@ -67,15 +67,15 @@ for i in range(0, length, sqrtl):
 	for j in range(0, length, sqrtl):
 		for row1 in range(sqrtl):
 			for col1 in range(sqrtl):
-				for row2 in range(row1 + 1, sqrtl):
-					for col2 in range(col1 + 1, sqrtl):
+				for row2 in range(sqrtl):
+					for col2 in range(sqrtl):
 						if row1 != row1 or col1 != col2:
-							s.add(grid[col1 + i][row1 + j] != grid[col2 + i][row2 + j]) #Inner Squares
-					
+							s.add(grid[col1 + i][row1 + j] != grid[col2 + i][row2 + j]) #Inner Squares		
+		
 if str(s.check()) != "sat":
 	print "Sudoku puzzle is not satisfiable (solvable)"
 	exit(0)
-
+	
 modelValues = string.split(str(s.model()), "\n")
 for value in modelValues:
 	data[int(value[6]) - 1][int(value[8]) - 1] = value[12]
