@@ -2,6 +2,7 @@ method MergeSort(a1:array<int>) returns (a:array<int>)
   requires a1 != null && a1.Length > 0;
   ensures a != null;
   ensures forall k:: forall l:: 0 <= k < l < a.Length ==> a[k] <= a[l];
+  //The statement below doesn't compile for me, so I commented it out.  Try uncommenting if something doesn't work
   //modifies a;
 {
   a := ms(a1, 0, a1.Length-1);
@@ -80,7 +81,7 @@ method merge(a1:array<int>, l:int, m:int, u:int) returns (a:array<int>)
   k := 0;
   while (k < u-l+1)
 	invariant 0 <= k <= u - l + 1 == buf.Length;
-	invariant forall elem1:: 0 <= elem1 < k ==> a[elem1 + l] == buf[elem1]; //Assert equality between arrays
+	invariant forall elem1:: l <= elem1 < k + l ==> a[elem1] == buf[elem1 - l]; //Assert equality between arrays
 	invariant forall elem1:: forall elem2:: 0 <= elem1 <= elem2 < buf.Length ==> buf[elem1] <= buf[elem2];
 	invariant forall elem1:: forall elem2:: 0 <= elem1 <= elem2 < k ==> buf[elem1] <= buf[elem2]; //buf is sorted on [0, k)
 
