@@ -1,6 +1,5 @@
 method BubbleSort(a:array<int>) 
   requires a != null;
-  requires a.Length < 5;
   ensures forall k:: forall l:: 0 <= k < l < a.Length ==> a[k] <= a[l];
   modifies a;
 {
