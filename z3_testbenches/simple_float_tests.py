@@ -34,7 +34,7 @@ def output(model, variables):
 clearer = file("simple_results.txt", 'w') #Clears the file before use
 s = Solver()
 
-t = Real('t')
+t = QF_FPA('t')
 s.add(t >= 0)
 s.add(t <= 999)
 s.add((t / (t + 1)) >= 0)
@@ -67,13 +67,3 @@ s.add(x2 <= 2)
 s.add((((x0 + x1) - x2) + ((x1 + x2) - x0)) + ((x2 + x0) - x1)  >= 3)
 s.add((((x0 + x1) - x2) + ((x1 + x2) - x0)) + ((x2 + x0) - x1)  <= 6)
 output(s, [x0, x1, x2])
-
-"""
-3) sum3_bounds.smt2
-The following inequality over double precision floating-point numbers is 
-encoded:
-
-Forall x0, x1, x2, 1.0 <= x0, x1, x2 <= 2.0
-    ==> 3.0 <= (((x0 + x1) - x2) + ((x1 + x2) - x0)) + ((x2 + x0) - x1) 
-<= 6.0
-"""

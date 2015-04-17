@@ -1,0 +1,9 @@
+List of modifications to boogie code to allow floating points
+
+- addition of literal5 in ExprImmutability.cs
+- addition of new LiteralExpr method def in AbsyExpr.cs
+- addition of Float type to AbsyType.cs (~line 340)
+- addition of Float type to SimpleType within AbsyType.cs (~line 3540)
+- addition of IsFloat function to AbsyType.cs (~line 1000)
+- addition of float type to ToString() function within AbsyType.cs (~line 880)
+- addition of Float value to TypeAtom function of Parser.cs (~line 670)
