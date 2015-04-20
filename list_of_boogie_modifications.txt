@@ -8,3 +8,7 @@ List of modifications to boogie code to allow floating points
 - addition of float type to ToString() function within AbsyType.cs (~line 880)
 - addition of Float value to TypeAtom function of Parser.cs (~line 670)  //MUST BE MODIFIED ONCE la.kind HAS FLOATING POINT TYPE ADDED!!!!
 - addition of case 135 "float error" added to GetSyntaxErrorString within Parser.cs (~line 2260)
+
+- addition of Float conversion in the NumToExpr of IntervalDomain.cs (~line 210)
+- addition of literal expression for float in AbsyExpr.cs (~line 360)
+- addition of float interpretation to VisitLiteralExpression in IntervalDomain.cs (~line 675)  //MAY NEED TO BE UPDATED LATER (THIS METHOD SEEMS SUPER IMPORTANT)
