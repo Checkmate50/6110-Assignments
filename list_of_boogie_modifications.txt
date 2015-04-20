@@ -12,3 +12,9 @@ List of modifications to boogie code to allow floating points
 - addition of Float conversion in the NumToExpr of IntervalDomain.cs (~line 210)
 - addition of literal expression for float in AbsyExpr.cs (~line 360)
 - addition of float interpretation to VisitLiteralExpression in IntervalDomain.cs (~line 675)  //MAY NEED TO BE UPDATED LATER (THIS METHOD SEEMS SUPER IMPORTANT)
+- addition of Float method to Parser.cs (~line 1870) //May require later updating
+- addition of fp case to AtomExpression within Parser.cs (~line 1750)
+- addition of float keyword to CheckLiteral within Scanner.cs (~line 510)
+- addition of float type to ShallowType within AbsyExpr.cs (~line 630)
+
+- writeline checks added to Scanner line 780 and Parser line 600 and Scanner line 505 and Parser line 173
