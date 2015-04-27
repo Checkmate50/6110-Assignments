@@ -7,7 +7,7 @@ List of modifications to boogie code to allow floating points
 - addition of IsFloat function to AbsyType.cs (~line 247, ~line 1000, ~line 1920, ~line 2770)
 - addition of float type to ToString() function within AbsyType.cs (~line 880)
 - addition of Float value to TypeAtom function of Parser.cs (~line 670)  //MUST BE MODIFIED ONCE la.kind HAS FLOATING POINT TYPE ADDED!!!!
-- addition of case 135 "float error" added to GetSyntaxErrorString within Parser.cs (~line 2260)
+- addition of case 97 "fp expected" and case 98 "\float expected" to GetSyntaxErrorString within Parser.cs (~line 2280)
 
 - addition of Float conversion in the NumToExpr of IntervalDomain.cs (~line 210)
 - addition of literal expression for float in AbsyExpr.cs (~line 360)
@@ -16,5 +16,11 @@ List of modifications to boogie code to allow floating points
 - addition of fp case to AtomExpression within Parser.cs (~line 1750)
 - addition of float keyword to CheckLiteral within Scanner.cs (~line 510)
 - addition of float type to ShallowType within AbsyExpr.cs (~line 630)
+- addition of toFloat to coercion expression within AbsyExpr.cs (~line 2200)
+
+- addition of several float-related items to Boogie2VCExpr and VCExprAST
+- addition of required float-related interface requirements to VCExprASTVisitors, SimplifyLikeLineariser, SMTLibLineariser
+
+- addition of float operations to AbsyExpr Opcode (line > 1445)
 
 - writeline checks added to Scanner line 780 and Parser line 600 and Scanner line 505 and Parser line 173
