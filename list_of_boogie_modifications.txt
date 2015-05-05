@@ -22,5 +22,6 @@ List of modifications to boogie code to allow floating points
 - addition of required float-related interface requirements to VCExprASTVisitors, SimplifyLikeLineariser, SMTLibLineariser
 
 - addition of float operations to AbsyExpr Opcode (line > 1445)
+- addition of float to string in TypeToString (mod to actual float later)
 
-- writeline checks added to Scanner line 780 and Parser line 600 and Scanner line 505 and Parser line 173
+- TODO: modify SMTLibNamer
